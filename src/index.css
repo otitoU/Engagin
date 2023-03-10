@@ -1,0 +1,43 @@
+/* Handle */
+*::-webkit-scrollbar-thumb {
+  background: #e43f40;
+  transition: all 0.6s;
+}
+
+/* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+  background: #ac2a2a;
+}
+*::-webkit-scrollbar {
+  width: 6px;
+}
+*,
+*::after,
+*::after,
+body,
+html {
+  font-family: 'DM Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: 576px) {
+  /* Styles for small devices */
+  html {
+    font-size: 50% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Styles for medium devices */
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  font-size: 1.6rem;
+  display: relative;
+}

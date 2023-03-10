@@ -1,0 +1,97 @@
+$xs: 320px; // Extra small devices (phones)
+$sm: 576px; // Small devices (tablets)
+$md: 768px; // Medium devices (desktops)
+$lg: 992px; // Large devices (desktops)
+$xl: 1200px;
+
+@media (max-width: $sm) {
+  /* Styles for small devices */
+}
+
+@media (max-width: $md) {
+  /* Styles for medium devices */
+}
+
+@media (max-width: $lg) {
+  /* Styles for large devices */
+}
+
+@media (min-width: $xl) {
+  /* Styles for extra large devices */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3.4rem;
+  height: 10rem;
+
+  .hamburger {
+    display: none;
+
+    @media only screen and (max-width: 746px) {
+      display: block;
+      cursor: pointer;
+    }
+
+    .bar {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      background-color: #101010;
+    }
+  }
+
+  //   border: 1px solid;
+  .productLogo {
+    height: 23rem;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+
+    @media only screen and (max-width: 768px) {
+      position: fixed;
+      left: -100%;
+      top: 5rem;
+      flex-direction: column;
+      background-color: #fff;
+      width: 100%;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+
+      .active {
+        left: 0;
+      }
+    }
+
+    li {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background-color: #e43f40;
+      border-radius: 8px;
+      transition: 0.4s all;
+
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+
+      a {
+        color: white;
+
+        text-decoration: none;
+      }
+
+      &:hover {
+        background-color: rgb(53, 53, 53);
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.card_slider {
+  background-color: #e43f40;
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  border-radius: 8px;
+  padding: 3rem;
+  overflow: hidden;
+  overflow-x: scroll;
+  flex-grow: 1;
+  /* overflow-x: hidden; */
+}
+.card_slider::-webkit-scrollbar {
+  display: none;
+}
+.sof {
+  h2 {
+    text-align: center;
+    font-size: 3.5rem;
+    color: rgb(9, 9, 105);
+  }
+}
