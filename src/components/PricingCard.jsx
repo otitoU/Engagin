@@ -58,7 +58,7 @@ function PricingCard(props) {
   } = props
 
   return (
-    <div className={`card pricing-card ${type}`}>
+    <div className={`p-card pricing-card ${type}`}>
       {mostPopular ? <span className="most-popular">Most Popular</span> : null}
       <CardDescription title={title} description={description} />
       <CardBilling price={price} recurrency={recurrency} />

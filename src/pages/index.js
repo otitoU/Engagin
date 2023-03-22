@@ -2,4 +2,5 @@
 import Features from './Features'
 import AboutCompany from './AboutCompany'
 import Accordian from './Accordian'
-export { Features, AboutCompany, Accordian }
+import Loader from './Loader.jsx'
+export { Features, AboutCompany, Accordian, Loader }

@@ -1,3 +1,21 @@
+$xs: 320px; // Extra small devices (phones)
+$sm: 576px; // Small devices (tablets)
+$md: 768px; // Medium devices (desktops)
+$lg: 992px; // Large devices (desktops)
+$xl: 1200px;
+
+@media (max-width: $sm) {
+  /* Styles for small devices */
+}
+
+@media (max-width: $lg) {
+  /* Styles for large devices */
+}
+
+@media (min-width: $xl) {
+  /* Styles for extra large devices */
+}
+
 .pricingcard {
   display: flex;
   flex-wrap: wrap;
@@ -6,6 +24,12 @@
   // height: 100vh;
   padding: 2rem;
   overflow: auto;
+  @media (max-width: $md) {
+    /* Styles for small devices */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .oSM {
   text-align: center;
@@ -13,17 +37,27 @@
   text-align: center;
   font-size: 3.5rem;
   color: #e43f40;
+  @media (max-width: $md) {
+    /* Styles for small devices */
+    margin: 3rem 0 1rem;
+  }
 }
 
 .wrapper {
   width: 600px;
+  color: black;
   margin: 0 auto;
-  height: 100vh;
+  // height: 100vh;
   padding: 2rem;
+  @media (max-width: $sm) {
+    /* Styles for small devices */
+    width: 100%;
+  }
 
   h2 {
     text-align: center;
     margin-bottom: 3rem;
+    color: #e43f40;
     font-size: 5rem;
   }
   .accordion-wrapper {

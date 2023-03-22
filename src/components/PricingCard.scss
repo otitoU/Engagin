@@ -1,4 +1,10 @@
-.card {
+$xs: 320px; // Extra small devices (phones)
+$sm: 576px; // Small devices (tablets)
+$md: 768px; // Medium devices (desktops)
+$lg: 992px; // Large devices (desktops)
+$xl: 1200px;
+
+.p-card {
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -10,6 +16,11 @@
   width: 100%;
   text-align: center;
 
+  @media (max-width: $md) {
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+  }
   .most-popular {
     font-size: 15px;
     font-weight: 700;

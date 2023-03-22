@@ -1,11 +1,12 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Header, NavBar, CardSlider, PricingCard } from './components'
-import { Features, AboutCompany, Accordian } from './pages'
+import { Features, AboutCompany, Accordian, Loader } from './pages'
 
 import './App.scss'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [loading, setLoading] = useState(true)
   const text = `We offer an augmented live streaming experience that overlays 3D statistics on live games as users are viewing. Statistics such as ball speed, distance traveled, 
   and pushing and passing yards that are captured by Sideline technology through various camera angles and the FTC, are securely transmitted to our platform. This way users are able to appreciate the athleticism of the player and further grasp the integrity of the game. Users can track personalized stats and feedback catered to their interests in the sport as analyzed by AI and Machine learning models.
 `
@@ -83,32 +84,42 @@ function App() {
     },
   ]
 
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 2 * 1000)
+  }, [])
+
   return (
     <div className="App">
-      <NavBar />
-      <AboutCompany />
-      <Header />
+      {loading ? (
+        <Loader />
+      ) : (
+        <>
+          <NavBar />
+          <AboutCompany />
+          <Header />
 
-      <Features text={text} heading={heading} />
-      <Features
-        reversed="features-reversed"
-        text={text1}
-        heading={heading1}
-        no="d"
-      />
-      <CardSlider />
-      <h2 className="oSM">Our Subscription model</h2>
-      <div className="pricingcard">
-        {cardsData.map((props) => {
-          return <PricingCard {...props} key={props.id} />
-        })}
-      </div>
-      <div className="wrapper">
-        <h2>FAQ</h2>
-        {accordainData.map((data) => {
-          return <Accordian {...data} key={data.id} />
-        })}
-      </div>
+          <Features text={text} heading={heading} />
+          <Features
+            reversed="features-reversed"
+            text={text1}
+            heading={heading1}
+            no="d"
+          />
+          <CardSlider />
+          <h2 className="oSM">Our Subscription model</h2>
+          <div className="pricingcard">
+            {cardsData.map((props) => {
+              return <PricingCard {...props} key={props.id} />
+            })}
+          </div>
+          <div className="wrapper">
+            <h2>FAQ</h2>
+            {accordainData.map((data) => {
+              return <Accordian {...data} key={data.id} />
+            })}
+          </div>
+        </>
+      )}
     </div>
   )
 }

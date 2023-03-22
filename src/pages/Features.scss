@@ -3,6 +3,7 @@ $sm: 576px; // Small devices (tablets)
 $md: 768px; // Medium devices (desktops)
 $lg: 992px; // Large devices (desktops)
 $xl: 1200px;
+
 .features,
 .features-reversed {
   font-family: 'DM Sans', sans-serif;
@@ -68,6 +69,7 @@ $xl: 1200px;
       p {
         width: 34rem;
         line-height: 1.5;
+        font-size: 1.9rem;
         margin-bottom: 1rem;
       }
       h4 {

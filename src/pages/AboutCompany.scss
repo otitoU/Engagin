@@ -8,10 +8,6 @@ $xl: 1200px;
   /* Styles for small devices */
 }
 
-@media (max-width: $md) {
-  /* Styles for medium devices */
-}
-
 @media (max-width: $lg) {
   /* Styles for large devices */
 }
@@ -26,6 +22,20 @@ $xl: 1200px;
   flex-direction: column;
   align-items: center;
   height: 100vh;
+
+  iframe {
+    width: 60rem;
+    @media (max-width: $sm) {
+      // width: 30rem;
+
+      /* Styles for small devices */
+    }
+  }
+
+  @media (max-width: $sm) {
+    padding: 0.4rem 6rem 2rem;
+    /* Styles for medium devices */
+  }
 
   h1 {
     text-transform: uppercase;
@@ -57,7 +67,7 @@ $xl: 1200px;
     @media (max-width: $md) {
       /* Styles for medium devices */
 
-      width: 100%;
+      width: 76%;
     }
   }
 }

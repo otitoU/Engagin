@@ -27,15 +27,16 @@ header {
     max-width: 100%;
     overflow: hidden;
     padding-top: 30px;
-    padding-bottom: 56.25%;
+    // padding-bottom: 56.25%;
   }
 
   .text-description {
     margin-top: 5rem;
-    color: rgb(61, 60, 60);
+    color: black;
     width: 80rem;
     line-height: 1.8;
     font-size: 1.9rem;
+    padding: 0 6rem;
     @media (max-width: $md) {
       /* Styles for medium devices */
       padding: 9rem;
